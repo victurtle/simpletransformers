@@ -157,6 +157,8 @@ class MultiLabelClassificationModel(ClassificationModel):
     def _load_model_args(self, input_dir):
         args = MultiLabelClassificationArgs()
         args.load(input_dir)
+        # KISSPlatform
+        args.config = {"output_hidden_states": True}
         return args
 
     def train_model(

@@ -1165,7 +1165,9 @@ class ClassificationModel:
             preds = [inverse_labels_map[pred] for pred in preds]
 
         if self.config.output_hidden_states:
-            return preds, model_outputs, all_embedding_outputs, all_layer_hidden_states
+            # KISSPlatform
+            # return preds, model_outputs, all_embedding_outputs, all_layer_hidden_states
+            return preds, model_outputs, all_embedding_outputs
         else:
             return preds, model_outputs
 
